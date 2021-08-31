@@ -68,3 +68,25 @@ if results.multi_hand_landmarks:
 - mpHands.HAND_CONNECTIONS : 기존의 점만 찍히던 img위에 연결선을 추가 할 수 있다.
 
 <img src="https://user-images.githubusercontent.com/57162448/131523401-59ea8a2d-fee3-4ed5-a0c6-dab5625f3ccf.png" height="150" ><img height="150" src="https://user-images.githubusercontent.com/57162448/131523436-21c4100b-2f1a-4044-b725-a798dcee36e5.png"><img height="150" src="https://user-images.githubusercontent.com/57162448/131523460-a02aa764-49fb-4953-ab29-e07ba83bbe86.png">
+___
+## FPS (frames per second)
+```python
+(...)
+pTime = 0  # previous
+cTime = 0  # current
+(...)
+cTime = time.time()
+fps = 1/(cTime-pTime)
+pTime = cTime
+cv2.putText(img, str(int(fps)), (10,70), cv2.FONT_HERSHEY_PLAIN,3,
+           (255,0,255),3)
+(...)
+```
+cv2.putText(img, str(int(fps)), (10,70), cv2.FONT_HERSHEY_PLAIN,3,(255,0,255),3)  
+: [참고](https://www.geeksforgeeks.org/python-opencv-cv2-puttext-method/)
+매개변수 순서대로 img, text, org, fontFace, fontScale, color, thickness, lineType, bottomLeftOrigin  
+|매개변수|의미|
+|---|---|
+|org|bottom-left corner 위치|
+|fontFace|font type. CV2.FONT_XXX|
+|bottomLeftOrigin|org 옵션 True 좌측하단 False 좌측 상단|
