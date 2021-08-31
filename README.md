@@ -1,5 +1,5 @@
 # HandTracking
-(computer vision) HandTracking Machine을 만들면서 opencv 사용법을 알아간다.
+(computer vision) HandTracking Machine을 만들면서 opencv와 mediapipe를 사용해본다.
 ___
 
 ## 비디오 캡쳐
@@ -55,3 +55,13 @@ hands.py
       hand.
 ___
 ## mediapipe의 drawing_utils
+```python
+mpDraw = mp.solutions.drawing_utils
+```
+mediapipe의 drawing_utils를 사용하기 위한 객체를 생성
+```python
+if results.multi_hand_landmarks:
+    for handLms in results.multi_hand_landmarks:
+        mpDraw.draw_landmarks(img, handLms)
+```
+results.multi_hand_landmarks의 랜드마크 정보를 img위에 그린다.
