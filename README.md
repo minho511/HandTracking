@@ -62,6 +62,8 @@ mediapipe의 drawing_utils를 사용하기 위한 객체를 생성
 ```python
 if results.multi_hand_landmarks:
     for handLms in results.multi_hand_landmarks:
-        mpDraw.draw_landmarks(img, handLms)
+        mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
 ```
-results.multi_hand_landmarks의 랜드마크 정보를 img위에 그린다.
+- results.multi_hand_landmarks의 랜드마크 정보를 img위에 그린다.  
+- mpHands.HAND_CONNECTIONS : 기존의 점만 찍히던 img위에 연결선을 추가 할 수 있다.
+
