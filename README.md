@@ -67,3 +67,4 @@ if results.multi_hand_landmarks:
 - results.multi_hand_landmarks의 랜드마크 정보를 img위에 그린다.  
 - mpHands.HAND_CONNECTIONS : 기존의 점만 찍히던 img위에 연결선을 추가 할 수 있다.
 
+<img src="https://user-images.githubusercontent.com/57162448/131523401-59ea8a2d-fee3-4ed5-a0c6-dab5625f3ccf.png" height="150" ><img height="150" src="https://user-images.githubusercontent.com/57162448/131523436-21c4100b-2f1a-4044-b725-a798dcee36e5.png"><img height="150" src="https://user-images.githubusercontent.com/57162448/131523460-a02aa764-49fb-4953-ab29-e07ba83bbe86.png">
