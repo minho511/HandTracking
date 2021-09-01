@@ -90,3 +90,23 @@ cv2.putText(img, str(int(fps)), (10,70), cv2.FONT_HERSHEY_PLAIN,3,(255,0,255),3)
 |org|bottom-left corner 위치|
 |fontFace|font type. CV2.FONT_XXX|
 |bottomLeftOrigin|org 옵션 True 좌측하단 False 좌측 상단|
+___
+## 각 랜드마크 값 가져오기
+```python
+(...)
+if results.multi_hand_landmarks:
+    h, w, c = img.shape
+    for handLms in results.multi_hand_landmarks:
+        for id, lm in enumerate(handLms.landmark):
+            # print(id, lm)
+            cx, cy = int(lm.x*w), int(lm.y*h)
+            # print(id, cx, cy)
+            if id == 4:  # 예시로 id값 4 (엄지손가락 끝)에 원을 그리도록 함
+                cv2.circle(img, (cx,cy), 15, (255,0,255),cv2.FILLED)
+        mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
+```
+- for id, lm in enumerate(handLms.landmark): 각 마디의 landmark 정보를 하나씩 꺼낸다.
+- h, w, c = img.shape : lm.x와 lm.y가 좌표를 화면 내의 비율 값으로 나타내므로 화면 너비 높이값이 필요하다.
+- cx, cy = int(lm.x*w), int(lm.y*h) : 비율값이 아닌 x, y좌표 값을 수치로 변형하여 저장한다.
+> 참고한 강의에서는 이중 for문 안에 h, w, c = img.shape 를 위치 하였으나 이 코드를 밖으로 빼내면 중복되는 계산을 제거할 수 있을것이라고 생각하여 수정하였다.
+
