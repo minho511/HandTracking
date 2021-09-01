@@ -118,3 +118,4 @@ ___
 ## 모듈화
 ___
 ## 결과
+<img src="https://user-images.githubusercontent.com/57162448/131673513-3b10718f-7bb5-47fe-a435-b31a5c683fb1.gif" height="150" >
