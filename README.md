@@ -110,3 +110,5 @@ if results.multi_hand_landmarks:
 - cx, cy = int(lm.x*w), int(lm.y*h) : 비율값이 아닌 x, y좌표 값을 수치로 변형하여 저장한다.
 > 참고한 강의에서는 이중 for문 안에 h, w, c = img.shape 를 위치 하였으나 이 코드를 밖으로 빼내면 중복되는 계산을 제거할 수 있을것이라고 생각하여 수정하였다.
 
+___
+## 모듈화하기
