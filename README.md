@@ -1,6 +1,9 @@
 # HandTracking
 (computer vision) HandTracking Machine을 만들면서 opencv와 mediapipe를 사용해본다.  
-강의 : https://www.youtube.com/watch?v=NZde8Xt78Iw&t=10s
+참고 강의  
+youtube   
+Murtaze's Workshop - Robotics and AI 채널  
+[Hand Tracking 30 FPS using CPU | OpenCV Python (2021) | Computer Vision]( https://www.youtube.com/watch?v=NZde8Xt78Iw&t=10s)
 ___
 
 ## 비디오 캡쳐
@@ -112,4 +115,3 @@ if results.multi_hand_landmarks:
 > 참고한 강의에서는 이중 for문 안에 h, w, c = img.shape 를 위치 하였으나 이 코드를 밖으로 빼내면 중복되는 계산을 제거할 수 있을것이라고 생각하여 수정하였다.
 
 ___
-## 모듈화하기
