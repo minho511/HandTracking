@@ -1,5 +1,5 @@
 # HandTracking
-(computer vision) HandTracking Machine을 만들면서 opencv와 mediapipe를 사용해본다.  
+HandTracking Machine을 만들면서 opencv와 mediapipe를 사용해본다.  
 참고 강의  
 youtube   
 Murtaze's Workshop - Robotics and AI 채널  
